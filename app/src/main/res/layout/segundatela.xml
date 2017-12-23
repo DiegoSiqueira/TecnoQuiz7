@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:id="@+id/segundatela"
+android:layout_height="match_parent"
+android:weightSum="1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPergunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pergunta" />
+
+    <TextView
+        android:id="@+id/tvPontuacao"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="171dp"
+        android:background="#FF010253"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btAvancar"
+        android:layout_width="wrap_content"
+        android:background="#FF010253"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:onClick="staticSegundaTela"
+        android:text="Avançar"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btResponder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#FF010253"
+        android:text="Responder"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btAvancar"
+        android:layout_marginEnd="77dp" />
+
+    <RadioGroup
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/rdA"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rdB"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rdC"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/rdD"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+</RelativeLayout>
+
+

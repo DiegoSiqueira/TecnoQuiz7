@@ -30,7 +30,6 @@ android:weightSum="1"
         android:background="#FF010253"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
-        android:onClick="staticSegundaTela"
         android:text="Avançar"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/radioGroup" />

@@ -16,7 +16,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class SegundaTela extends AppCompatActivity {
 
-    static final String Tag ="tecno";
+   static final String Tag ="tecno";
     RadioButton rdA,rdB, rdC, rdD;
 
     TextView tvPergunta, tvPontuacao;
@@ -29,7 +29,7 @@ public class SegundaTela extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i(TAG, "Segunda tela");
+       Log.i(TAG, "Segunda tela");
         super.onCreate(savedInstanceState);
         Log.i(TAG, "Layout segunda tela");
         setContentView(R.layout.segundatela);
@@ -43,10 +43,6 @@ public class SegundaTela extends AppCompatActivity {
 
         final byte nivel_pergunta = 1;
         Log.i(TAG, "Nivel facil: " + nivel_pergunta);
-        final byte nivel_pergunta2 = 2;
-        Log.i(TAG, "Nivel medio:" + nivel_pergunta2);
-        final byte nivel_pergunta3 = 3;
-        Log.i(TAG, "Nivel dificil:" + nivel_pergunta3);
 
 
         int idPergunta = args.getInt("");
@@ -117,6 +113,7 @@ public class SegundaTela extends AppCompatActivity {
          public void onClick(View view) {
 
 
+       Log.i(TAG,"testando");
 
              Log.i(TAG, "Evento do Botão bt_Responder");
              int op = rdGrupe.getCheckedRadioButtonId();
@@ -146,7 +143,7 @@ public class SegundaTela extends AppCompatActivity {
                          nova_pontuacao = pontuacao + 100;
                  }
 
-                 tvPontuacao.setText(Integer.toString(nova_pontuacao));
+                 tvPontuacao.setText (Integer.toString(nova_pontuacao));
 
 
              }else {
@@ -160,7 +157,10 @@ public class SegundaTela extends AppCompatActivity {
          }
      });
 
+
     }
 
 
-}
+
+
+    }

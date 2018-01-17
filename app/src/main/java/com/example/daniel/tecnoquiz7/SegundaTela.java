@@ -108,8 +108,13 @@ public class SegundaTela extends AppCompatActivity {
         Avancar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!rdA.isChecked() || !rdB.isChecked() || !rdC.isChecked() || !rdD.isChecked())
+                if (!rdA.isChecked() || !rdB.isChecked() || !rdC.isChecked() || !rdD.isChecked()){
                     Toast.makeText(SegundaTela.this, "Vc Não Confirmou a Resposta no Botão Responder", Toast.LENGTH_SHORT).show();
+
+                }else {
+                    Toast.makeText(SegundaTela.this, "vc não confirmou a resposta nos botão responder", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });

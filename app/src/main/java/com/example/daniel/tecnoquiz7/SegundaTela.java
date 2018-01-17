@@ -6,17 +6,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.List;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class SegundaTela extends AppCompatActivity {
 
-   static final String Tag ="tecno";
+   static final String TAG ="tecno";
     RadioButton rdA,rdB, rdC, rdD;
 
     TextView tvPergunta, tvPontuacao;
@@ -24,7 +29,6 @@ public class SegundaTela extends AppCompatActivity {
     RadioGroup rdGrupe;
     Db_quiz banco;
 
-    private final String TAG = "usuario";
 
 
     @Override
@@ -96,6 +100,9 @@ public class SegundaTela extends AppCompatActivity {
 
 
         banco = new Db_quiz(this);
+        banco.insertPerguta(banco);
+        pergunta(1);
+
 
 
         Avancar.setOnClickListener(new View.OnClickListener() {
@@ -159,8 +166,15 @@ public class SegundaTela extends AppCompatActivity {
 
 
     }
+    public void pergunta(int nivel) {
+        Db_quiz banco = new Db_quiz(this);
+        String[] de = {"pergunta"};
+        int layout = R.layout.segundatela;
+        int[] para = {R.id.tvPergunta};
 
-
+        List<HashMap<String, Object>> pergunta = banco.buscarPergunta(banco, nivel);
+        SimpleAdapter adapter = new SimpleAdapter(this, pergunta, layout, de, para);
+    }
 
 
     }
